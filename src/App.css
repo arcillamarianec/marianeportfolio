@@ -1,0 +1,428 @@
+/* Fonts */
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*for diffrent sizes*/
+@media (max-width: 790px) {
+  .icon1, .icon2, .icon3{
+    display: none;
+  }
+
+}
+
+@media (max-width: 482px) {
+  .sidebar{
+    height: 150vh;
+  }
+}
+
+@media (max-width: 300px) {
+  .webheader, .weburl, .iconWebContent{
+    display: none;
+  }
+}
+
+
+
+.layout {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar b b"
+    "sidebar b b";
+  grid-template-rows: auto 100%;
+  grid-template-columns: auto 1fr 1fr;
+}
+
+.header {
+  grid-area: header;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  background-color: #1C1D1F;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 94vh;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    height: auto;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    height: auto;
+    padding: 5px;
+  }
+}
+
+
+.b {
+  grid-area: b;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarIcon {
+  height: 2.5em;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+html{
+  height: 100%;
+}
+.homepage {
+  height: 100%;
+  width: 100%;
+  background: rgb(162, 37, 51);
+  background: linear-gradient(180deg, rgba(162, 37, 51, 1) 0%, rgba(85, 8, 86, 1) 40%, rgba(43, 1, 39, 1) 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #41403C;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: grid;
+  grid:
+    "webheader . ." 5vh
+    "weburl . ." 8vh
+    "webbody . ." auto
+    / 100% 1fr 1fr;
+}
+
+.webheader {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  background-color: #F2F1EF;
+  grid-area: webheader;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 14px;
+}
+.weburl {
+  grid-area: weburl;
+  background-color: #F2F1EF;
+  padding: 10px;
+  display: grid;
+  grid:
+    "navIcons urlBox ." auto
+    ". . ." auto
+    ". . ." auto
+    / 10% auto 0;
+  gap: 8px;
+}
+
+.navIcons {
+  align-content: center;
+  grid-area: navIcons;
+}
+.urlBox {
+  grid-area: urlBox;
+}
+
+.webbody {
+  background-color: white;
+  grid-area: webbody;
+  padding: 10px;
+}
+.urlBox{
+  padding: 10px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+}
+.navIcons{
+  margin-left: 12px;
+}
+.icon1, .icon2, .icon5{
+  height: 12px;
+}
+.icon3, .icon4{
+  height: 10px;
+}
+.icon5{
+  padding-right: 10px;
+}
+
+.iconWebContent{
+  padding: 10px;
+  align-content: center;
+}
+
+.searchbar{
+  border-radius: 20px;
+  background-color: #F2F1EF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width:60%;
+  padding:15px;
+  color: black;
+  text-align: center;
+  display: flex;
+}
+.circle{
+  height: 60px;
+  width: 60px;
+  background-color: #F2F1EF;
+  border-radius: 80%;
+}
+.IconsSet {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle.dot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #F2F1EF;
+  border: 1px solid #F2F1EF;
+}
+.searchbar {
+  margin: 10px 0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.circleIcon{
+  padding: 12px;
+}
+.iconItem{
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.iconItem:hover{
+  background-color: #E8E8E9;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.iconWebContent{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.moreIcon{
+  margin-top: auto;
+  padding-bottom: 15px;
+}
+.credits{
+  background-color: white;
+  padding-top: 4px;
+  height: 2vh;
+  text-align: center;
+  font-size: 10px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.aboutMeLayout{
+  padding: 2vh;
+}
+.aboutMeDesc{
+  text-align: start;
+}
+.profile-img{
+  height: 200px;
+  border-radius: 10px;
+}
+.yearDesc{
+  text-align: end;
+}
+.experienceList {
+  list-style-type: disc; /* Bulleted list */
+  margin: 0; /* Remove default margin */
+  padding-left: 20px; /* Indent list items */
+}
+
+.experienceList li {
+  margin-bottom: 8px; /* Space between list items */
+  text-align: left; /* Ensure text is aligned to the left */
+  line-height: 1.5; /* Optional: Adjust line height for better readability */
+}
+.card-title, .card-text{
+  text-align: start;
+}
+.dedenneGif{
+  height: 100%;
+  border-radius: 10px;
+}
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh; /* Full viewport height */
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.dedenneGif {
+  margin-top: 20px; /* Space between image and text */
+  height: 20vh; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+  border-radius: 100%;
+}
+
+.errorTitle {
+  font-size: 10vh;
+  color: darkred; /* Example color */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+.errorDescription {
+  font-size: 1.5rem;
+  color: #333; /* Example color */
+}
+.aboutMeName{
+  text-align: start;
+}
+.iconContactMe{
+  height: 5vh;
+}
+.contactMeCard, .aboutMeLayout{
+  border-radius: 10px;
+  border: none;
+}
+.odd{
+  border: 1px solid #E6E4E0;
+}
+.aboutMeLayout, .even{
+  background-color: #F8F9FA;
+}
+.pictureProj{
+  height: 300px;
+}
+.card-link {
+  display: block;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.card-link:hover {
+  background-color: #E6E4E0;
+  color: black;
+  border-radius: 10px;
+}
+.card.cardP{
+  border-radius: 10px;
+}
+
+
+
+@media (max-width: 769px) {
+  .sidebar{
+    height: 140vh;
+  }
+}
+@media (max-width: 284px) {
+  .sidebar{
+    display: none;
+  }
+  .webheader, .weburl, .iconWebContent{
+    display: none;
+  }
+}
+@media (max-height: 1400px) {
+  .sidebar{
+    height: 160vh;
+  }
+}
+@media (max-height: 405px) {
+  .sidebar{
+    height: 160vh;
+  }
+}
+@media (max-height: 362px) {
+  .sidebar{
+    height: 180vh;
+  }
+}
+@media (max-height: 250px) {
+  .sidebar{
+    height: 300vh;
+  }
+}
+@media (max-height: 315px) {
+  .sidebar{
+    display: none;
+  }
+}
+@media (max-height: 490px) {
+  .webheader, .weburl, .iconWebContent{
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar{
+    display: none;
+  }
+}
